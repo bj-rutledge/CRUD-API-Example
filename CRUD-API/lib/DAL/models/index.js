@@ -1,3 +1,7 @@
+/** Created by BJ Rutledge 
+  * 8/20/2023
+  **/
+
 "use strict";
 
 const mongoose = require("mongoose");
