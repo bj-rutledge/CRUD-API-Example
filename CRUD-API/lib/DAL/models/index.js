@@ -68,17 +68,3 @@ const Customer = mongoose.model("Customer", customerSchema);
 const Employee = mongoose.model("Employee", employeeSchema);
 
 module.exports = { Customer, Employee };
-
-
-
-function sum(a){
-   return function(b){
-      if(b){
-         return sum(a + b);
-
-      }
-      return a;
-   }
-}
-
-sum(1)(3)(2)(1)()
