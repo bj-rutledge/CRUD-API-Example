@@ -1,11 +1,8 @@
+"use strict";
 /** Created by BJ Rutledge 
   * 8/20/2023
   **/
 
-"use strict";
-/* Created by BJ Rutledge 
- * 9/10/23
- */
 
 const mongoose = require("mongoose");
 const Order = require('../../order');
