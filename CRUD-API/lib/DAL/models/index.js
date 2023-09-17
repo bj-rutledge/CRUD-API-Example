@@ -1,4 +1,7 @@
 "use strict";
+/* Created by BJ Rutledge 
+ * 9/10/23
+ */
 
 const mongoose = require("mongoose");
 const Order = require('../../order');
@@ -25,6 +28,10 @@ const customerSchema = new mongoose.Schema({
       min: [2, "Name must be at least 2 characters"],
       max: 20,
       required: [true, "First name is required"],
+   },
+   taxable: {
+      type: Boolean, 
+      required: [true, 'taxable is a required field.']
    },
    orders: [Order],
 });
@@ -71,14 +78,3 @@ module.exports = { Customer, Employee };
 
 
 
-function sum(a){
-   return function(b){
-      if(b){
-         return sum(a + b);
-
-      }
-      return a;
-   }
-}
-
-sum(1)(3)(2)(1)()
