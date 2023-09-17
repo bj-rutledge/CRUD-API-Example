@@ -79,9 +79,6 @@ const Customer = mongoose.model("Customer", customerSchema);
 const Employee = mongoose.model("Employee", employeeSchema);
 
 module.exports = { Customer, Employee };
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> dfd0f3d6731c81178791e016ecdfa8a062096915
