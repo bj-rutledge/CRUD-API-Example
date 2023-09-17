@@ -1,7 +1,4 @@
-'use strict';
-const { MongoDBCollectionNamespace } = require("mongodb");
-
- 
+'use strict'; 
 
 class Customer{
    constructor(){
