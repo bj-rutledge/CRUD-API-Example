@@ -1,4 +1,29 @@
 # CRUD-API-Example
+# Table of Contents
+
+- [CRUD-API-Example](#crud-api-example)
+- [Table of Contents](#table-of-contents)
+  - [License](#license)
+  - [Description](#description)
+  - [Functionality](#functionality)
+  - [Routes](#routes)
+    - [Under development](#under-development)
+  - [Data Structures](#data-structures)
+    - [Customer](#customer)
+      - [Properties](#properties)
+    - [Employee](#employee)
+      - [Properties](#properties-1)
+    - [Order](#order)
+      - [Properties](#properties-2)
+        - [Instantiation Example](#instantiation-example)
+    - [Product](#product)
+      - [Properties](#properties-3)
+        - [Instantiation Example](#instantiation-example-1)
+    - [Customer Schema](#customer-schema)
+      - [Fields](#fields)
+    - [Employee Schema](#employee-schema)
+      - [Fields](#fields-1)
+    - [Data Models](#data-models)
 
 ## License
 
