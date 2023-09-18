@@ -41,7 +41,7 @@ It features a Node.js and Express server with routes that enable the creation, r
 
 #### Properties
 - `Date` date
-- `Number` orderNumber
+- `Number` id
 - `Array` of `Product` objects named `items`
 - `Number` customerNumber
 - `Number` orderTotal
@@ -49,11 +49,11 @@ It features a Node.js and Express server with routes that enable the creation, r
 ##### Instantiation Example
 ```javascript
 const date = new Date(); 
-const ordNum = 1234;
+const orderId = 1234;
 const products = [product1, product2, product3]; // Array of Product
 const customerNumber = 24; // Each order is linked to a customer account
 
-const order = new Order(date, ordNum, products, customerNumber); 
+const order = new Order(date, orderId, products, customerNumber); 
 // Get the total for the order
 console.log(order.orderTotal);
 ```

@@ -8,19 +8,19 @@ class Order {
    /**
     * Customer order.
     * @param {Date} date Date of order
-    * @param {Number} orderNumber Order number
+    * @param {Number} id Order number
     * @param {[Product]} items Array of Products
     * @param {Number} customerNumber Customer Number
     */
-   constructor(date, orderNumber, items, customerNumber) {
+   constructor(date, id, items, customerNumber) {
       if (
          Object.prototype.toString.call(date) === '[object Date]' &&
-         typeof orderNumber === 'number' &&
+         typeof id === 'number' &&
          Object.prototype.toString.call(items) === '[object Array]' &&
          typeof customerNumber === 'number'
       ) {
          this.date = date;
-         this.orderNumber = orderNumber;
+         this.id = id;
          this.items = items;
          this.customerNumber = customerNumber;
       } else {
