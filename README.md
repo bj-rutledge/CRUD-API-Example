@@ -1,5 +1,11 @@
 # CRUD-API-Example
 
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+**Developer**: BJ Rutledge
+
 ## Description
 
 This project serves as a simple example of a CRUD (Create, Read, Update, Delete) API. It utilizes a MongoDB database hosted on Atlas for data storage.
@@ -7,6 +13,8 @@ This project serves as a simple example of a CRUD (Create, Read, Update, Delete)
 ## Functionality
 
 It features a Node.js and Express server with routes that enable the creation, reading, updating, and deletion of records for a fictional business.
+
+
 
 **Note**: This project is currently under development, and the documentation will continue to be updated as development progresses.
 
