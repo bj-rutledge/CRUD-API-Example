@@ -19,7 +19,7 @@ const customerSchema = new mongoose.Schema({
       max: 20,
       required: [true, 'First name is required'],
    },
-   mi: {
+   middleInitial: {
       type: String,
       max: [1, 'Middle initial is only one character.'],
    },
@@ -50,7 +50,7 @@ const employeeSchema = new mongoose.Schema({
       max: 20,
       required: [true, 'First name is required'],
    },
-   mi: {
+   middleInitial: {
       type: String,
       max: [1, 'Middle initial is only one character.'],
    },

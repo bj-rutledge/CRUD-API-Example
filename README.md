@@ -119,7 +119,7 @@ const product = new Product(productNum, cost, markup, list, sellAtList, productN
 console.log(product.price);
 ```
 
-Certainly, here's the documentation in Markdown format for the `Customer` and `Employee` schemas and data models using Mongoose and MongoDB in Node.js:
+`Customer` and `Employee` schemas and data models using Mongoose and MongoDB in Node.js:
 
 ### Customer Schema
 
@@ -135,7 +135,7 @@ The `customerSchema` represents the schema for the Customer model. It defines th
   - Minimum Length: 2 characters
   - Maximum Length: 20 characters
   - Required: Yes
-- `mi` (String): The middle initial of the customer (optional).
+- `middleInitial` (String): The middle initial of the customer (optional).
   - Type: String
   - Maximum Length: 1 character
 - `last` (String): The last name of the customer.
@@ -146,7 +146,7 @@ The `customerSchema` represents the schema for the Customer model. It defines th
 - `taxable` (Boolean): Indicates if the customer is taxable.
   - Type: Boolean
   - Required: Yes
-- `orders` (Array of Number): An array of order numbers associated with the customer. Orders will be stored seperatly. 
+- `orders` (Array of Number): An array of order numbers associated with the customer. Orders will be stored separately. 
 
 
 ### Employee Schema
@@ -163,7 +163,7 @@ The `employeeSchema` represents the schema for the Employee model. It defines th
   - Minimum Length: 2 characters
   - Maximum Length: 20 characters
   - Required: Yes
-- `mi` (String): The middle initial of the employee (optional).
+- `middleInitial` (String): The middle initial of the employee (optional).
   - Type: String
   - Maximum Length: 1 character
 - `last` (String): The last name of the employee.
