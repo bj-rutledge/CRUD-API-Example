@@ -41,6 +41,7 @@ It features a Node.js and Express server with routes that enable the creation, r
 
 #### Properties
 - `Date` date
+- `Number` orderNumber
 - `Array` of `Product` objects named `items`
 - `Number` customerNumber
 - `Number` orderTotal
@@ -48,10 +49,11 @@ It features a Node.js and Express server with routes that enable the creation, r
 ##### Instantiation Example
 ```javascript
 const date = new Date(); 
+const ordNum = 1234;
 const products = [product1, product2, product3]; // Array of Product
 const customerNumber = 24; // Each order is linked to a customer account
 
-const order = new Order(date, products, customerNumber); 
+const order = new Order(date, ordNum, products, customerNumber); 
 // Get the total for the order
 console.log(order.orderTotal);
 ```
@@ -111,9 +113,8 @@ The `customerSchema` represents the schema for the Customer model. It defines th
 - `taxable` (Boolean): Indicates if the customer is taxable.
   - Type: Boolean
   - Required: Yes
-- `orders` (Array of Order): An array of Order objects associated with the customer.
+- `orders` (Array of Number): An array of order numbers associated with the customer. Orders will be stored seperatly. 
 
-## Data Schema and Models
 
 ### Employee Schema
 

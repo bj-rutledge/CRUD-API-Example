@@ -33,7 +33,7 @@ const customerSchema = new mongoose.Schema({
       type: Boolean,
       required: [true, 'taxable is a required field.'],
    },
-   orders: [Order],
+   orders: [Number],
 });
 
 /*Employee schema
