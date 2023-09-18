@@ -14,18 +14,22 @@ class Product {
     * @param {number} list List price of product
     * @param {boolean} sellAtList Sets price to list if sell at list is true.
     */
-   constructor(number, cost, markup, list, sellAtList) {
+   constructor(number, cost, markup, list, sellAtList, productName, productDescription) {
       if (
          typeof number == 'number' &&
          typeof cost == 'number' &&
          typeof markup == 'number' &&
-         typeof sellAtList == 'boolean'
+         typeof sellAtList == 'boolean' &&
+         typeof productName == 'string' &&
+         typeof productDescription == 'string' 
       ) {
          this.number = number;
          this.cost = cost;
          this.markup = markup >= this.MIN_MARKUP ? markup : this.MIN_MARKUP;
          this.list = list;
          this.sellAtList = sellAtList;
+         this.productName = productName; 
+         this.productDescription = productDescription; 
       } else {
          console.error(
             'Invalid arguments.',
