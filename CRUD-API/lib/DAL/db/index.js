@@ -1,8 +1,8 @@
-"use strict";
-/** Created by BJ Rutledge 
-  * 8/20/2023
-  **/
-const { MongoClient, ServerApiVersion } = require("mongodb");
+'use strict';
+/** Created by BJ Rutledge
+ * 8/20/2023
+ **/
+const { MongoClient, ServerApiVersion } = require('mongodb');
 
 const uri = process.env.DB_URI;
 
@@ -31,10 +31,10 @@ function verifyConnection() {
 verifyConnection()
    .then(
       console.debug(
-         "Pinged your deployment. You successfully connected to MongoDB!"
+         'Pinged your deployment. You successfully connected to MongoDB!'
       )
    )
-   .catch((error) => console.error("DB Connection failed.", error));
+   .catch((error) => console.error('DB Connection failed.', error));
 
 const db = {
    client: client,

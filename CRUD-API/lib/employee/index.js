@@ -1,9 +1,7 @@
-'use strict'; 
+'use strict';
 
 class Employee {
-   constructor(){
-
-   }
+   constructor() {}
 }
 
-module.exports = Employee; 
+module.exports = Employee;
