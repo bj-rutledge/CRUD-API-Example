@@ -82,3 +82,70 @@ const product = new Product(productNum, cost, markup, list, sellAtList, productN
   * the default, the default value is used. 
   */ 
 console.log(product.price);
+```
+
+Certainly, here's the documentation in Markdown format for the `Customer` and `Employee` schemas and data models using Mongoose and MongoDB in Node.js:
+
+### Customer Schema
+
+The `customerSchema` represents the schema for the Customer model. It defines the structure and constraints for storing customer information in the MongoDB database.
+
+#### Fields
+
+- `number` (Number): The unique customer number.
+  - Type: Number
+  - Required: Yes
+- `first` (String): The first name of the customer.
+  - Type: String
+  - Minimum Length: 2 characters
+  - Maximum Length: 20 characters
+  - Required: Yes
+- `mi` (String): The middle initial of the customer (optional).
+  - Type: String
+  - Maximum Length: 1 character
+- `last` (String): The last name of the customer.
+  - Type: String
+  - Minimum Length: 2 characters
+  - Maximum Length: 20 characters
+  - Required: Yes
+- `taxable` (Boolean): Indicates if the customer is taxable.
+  - Type: Boolean
+  - Required: Yes
+- `orders` (Array of Order): An array of Order objects associated with the customer.
+
+## Data Schema and Models
+
+### Employee Schema
+
+The `employeeSchema` represents the schema for the Employee model. It defines the structure and constraints for storing employee information in the MongoDB database.
+
+#### Fields
+
+- `number` (Number): The unique employee number.
+  - Type: Number
+  - Required: Yes
+- `first` (String): The first name of the employee.
+  - Type: String
+  - Minimum Length: 2 characters
+  - Maximum Length: 20 characters
+  - Required: Yes
+- `mi` (String): The middle initial of the employee (optional).
+  - Type: String
+  - Maximum Length: 1 character
+- `last` (String): The last name of the employee.
+  - Type: String
+  - Minimum Length: 2 characters
+  - Maximum Length: 20 characters
+  - Required: Yes
+- `hireDate` (Date): The date when the employee was hired.
+  - Type: Date
+  - Required: Yes
+- `terminationDate` (Date): The date when the employee was terminated (optional).
+
+### Data Models
+
+- `Customer`: A Mongoose model based on the `customerSchema`. It represents customer data in the MongoDB database.
+
+- `Employee`: A Mongoose model based on the `employeeSchema`. It represents employee data in the MongoDB database.
+
+These schemas and data models are designed to provide a structured way to store and manipulate customer and employee data within your Node.js application using MongoDB and Mongoose.
