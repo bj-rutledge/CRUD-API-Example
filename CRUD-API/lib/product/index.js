@@ -8,36 +8,48 @@ class Product {
    MIN_MARKUP = 1.5;
    /**
     * Simple product class.
-    * @param {number} number Customer number
+    * @param {number} productNumber Customer number
     * @param {number} cost Cost of item
     * @param {number} markup Markup as percentage. If markup is below 1.5, the markup will be set to the default of 1.5
-    * @param {number} list List price of product
+    * @param {number} listPrice List price of product
     * @param {boolean} sellAtList Sets price to list if sell at list is true.
+    * @param {string} productName Name of product
+    * @param {string} productDescription Description of product.
     */
-   constructor(number, cost, markup, list, sellAtList, productName, productDescription) {
+   constructor(
+      productNumber,
+      cost,
+      markup,
+      listPrice,
+      sellAtList,
+      productName,
+      productDescription
+   ) {
       if (
-         typeof number == 'number' &&
+         typeof productNumber == 'number' &&
          typeof cost == 'number' &&
          typeof markup == 'number' &&
          typeof sellAtList == 'boolean' &&
          typeof productName == 'string' &&
-         typeof productDescription == 'string' 
+         typeof productDescription == 'string'
       ) {
-         this.number = number;
+         this.number = productNumber;
          this.cost = cost;
          this.markup = markup >= this.MIN_MARKUP ? markup : this.MIN_MARKUP;
-         this.list = list;
+         this.listPrice = listPrice;
          this.sellAtList = sellAtList;
-         this.productName = productName; 
-         this.productDescription = productDescription; 
+         this.productName = productName;
+         this.productDescription = productDescription;
       } else {
          console.error(
             'Invalid arguments.',
-            number,
+            productNumber,
             cost,
             markup,
-            list,
-            sellAtList
+            listPrice,
+            sellAtList,
+            productName,
+            productDescription
          );
       }
    }
@@ -45,7 +57,7 @@ class Product {
     * it will be calculated cost * markup.
     */
    get price() {
-      return this.sellAtList ? this.list : this.cost * this.markup;
+      return this.sellAtList ? this.listPrice : this.cost * this.markup;
    }
 }
 

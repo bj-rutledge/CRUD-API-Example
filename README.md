@@ -1,4 +1,5 @@
 # CRUD-API-Example
+
 # Table of Contents
 
 - [CRUD-API-Example](#crud-api-example)
@@ -39,21 +40,18 @@ This project serves as a simple example of a CRUD (Create, Read, Update, Delete)
 
 It features a Node.js and Express server with routes that enable the creation, reading, updating, and deletion of records for a fictional business.
 
-
-
 **Note**: This project is currently under development, and the documentation will continue to be updated as development progresses.
 
+## Routes
 
-## Routes 
-###  Under development 
-
-
+### Under development
 
 ## Data Structures
 
 ### Customer
 
 #### Properties
+
 - `Number` ID
 - `String` firstName
 - `String` lastName
@@ -64,6 +62,7 @@ It features a Node.js and Express server with routes that enable the creation, r
 ### Employee
 
 #### Properties
+
 - `Number` id
 - `String` firstName
 - `String` lastName
@@ -73,6 +72,7 @@ It features a Node.js and Express server with routes that enable the creation, r
 ### Order
 
 #### Properties
+
 - `Date` date
 - `Number` id
 - `Array` of `Product` objects named `items`
@@ -80,42 +80,54 @@ It features a Node.js and Express server with routes that enable the creation, r
 - `Number` orderTotal
 
 ##### Instantiation Example
+
 ```javascript
-const date = new Date(); 
+const date = new Date();
 const orderId = 1234;
 const products = [product1, product2, product3]; // Array of Product
 const customerNumber = 24; // Each order is linked to a customer account
 
-const order = new Order(date, orderId, products, customerNumber); 
+const order = new Order(date, orderId, products, customerNumber);
 // Get the total for the order
 console.log(order.orderTotal);
 ```
+
 ### Product
 
 #### Properties
+
 - `Number` number
-- `Number` cost 
+- `Number` cost
 - `Number` markup
-- `Number` listPrice 
-- `Boolean` sellAtList 
-- `Number` price 
+- `Number` listPrice
+- `Boolean` sellAtList
+- `Number` price
 
 ##### Instantiation Example
+
 ```javascript
-const productNum = 22; 
-const cost = 5.00;
+const productNum = 22;
+const cost = 5.0;
 const markup = 2.5;
 const list = 6.22;
-const sellAtList = false; 
-const productName = 'My Widget';
-const productDescription = 'My Widget is so cool!';
+const sellAtList = false;
+const productName = "My Widget";
+const productDescription = "My Widget is so cool!";
 
-const product = new Product(productNum, cost, markup, list, sellAtList, productName, productDescription); 
+const product = new Product(
+  productNum,
+  cost,
+  markup,
+  list,
+  sellAtList,
+  productName,
+  productDescription
+);
 /** If sellAtList === true, the price is set to list;
-  * otherwise, it will be markup * cost.
-  * The default markup is 1.5. If the provided markup is below 
-  * the default, the default value is used. 
-  */ 
+ * otherwise, it will be markup * cost.
+ * The default markup is 1.5. If the provided markup is below
+ * the default, the default value is used.
+ */
 console.log(product.price);
 ```
 
@@ -146,8 +158,7 @@ The `customerSchema` represents the schema for the Customer model. It defines th
 - `taxable` (Boolean): Indicates if the customer is taxable.
   - Type: Boolean
   - Required: Yes
-- `orders` (Array of Number): An array of order numbers associated with the customer. Orders will be stored separately. 
-
+- `orders` (Array of Number): An array of order numbers associated with the customer. Orders will be stored separately.
 
 ### Employee Schema
 

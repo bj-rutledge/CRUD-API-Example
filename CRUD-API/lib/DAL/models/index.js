@@ -68,7 +68,7 @@ const employeeSchema = new mongoose.Schema({
 });
 
 /**
- * 
+ *
  */
 const Customer = mongoose.model('Customer', customerSchema);
 const Employee = mongoose.model('Employee', employeeSchema);
