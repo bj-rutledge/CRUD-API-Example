@@ -3,6 +3,8 @@
  * 2023-09-17*/
 
 const Product = require('../product');
+const getType = require('../helpers/getType');
+const types = require('../helpers/types');
 
 class Order {
    /**
@@ -14,7 +16,7 @@ class Order {
     */
    constructor(date, id, items, customerNumber) {
       if (
-         Object.prototype.toString.call(date) === '[object Date]' &&
+         getType(date) === types.Date &&
          typeof id === 'number' &&
          Object.prototype.toString.call(items) === '[object Array]' &&
          typeof customerNumber === 'number'
@@ -43,3 +45,4 @@ class Order {
 }
 
 module.exports = Order;
+

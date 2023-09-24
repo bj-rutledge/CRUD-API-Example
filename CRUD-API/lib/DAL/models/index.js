@@ -40,7 +40,7 @@ const customerSchema = new mongoose.Schema({
  *
  */
 const employeeSchema = new mongoose.Schema({
-   number: {
+   id: {
       type: Number,
       required: [true, 'Must have an employee number.'],
    },
@@ -63,6 +63,10 @@ const employeeSchema = new mongoose.Schema({
    hireDate: {
       type: Date,
       required: [true, 'Must have a hire date. '],
+   },
+   terminated: {
+      type: Boolean,
+      required: [true, 'Must have terminated boolean']
    },
    terminationDate: Date,
 });

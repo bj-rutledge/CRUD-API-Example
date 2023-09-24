@@ -13,12 +13,19 @@
     - [Customer](#customer)
       - [Properties](#properties)
     - [Employee](#employee)
+      - [Description](#description-1)
       - [Properties](#properties-1)
+      - [Constructor](#constructor)
+        - [`constructor(employeeId, firstName, lastName, middleInitial, hireDate)`](#constructoremployeeid-firstname-lastname-middleinitial-hiredate)
+      - [Methods](#methods)
+        - [`terminateEmployee(date)`](#terminateemployeedate)
+      - [Example](#example)
+        - [Properties](#properties-2)
     - [Order](#order)
-      - [Properties](#properties-2)
+      - [Properties](#properties-3)
         - [Instantiation Example](#instantiation-example)
     - [Product](#product)
-      - [Properties](#properties-3)
+      - [Properties](#properties-4)
         - [Instantiation Example](#instantiation-example-1)
     - [Customer Schema](#customer-schema)
       - [Fields](#fields)
@@ -61,13 +68,74 @@ It features a Node.js and Express server with routes that enable the creation, r
 
 ### Employee
 
+#### Description
+
+The `Employee` class represents an employee in a fictional business. It is used for managing employee information within the application.
+
 #### Properties
+
+- `employeeId` (Number): The unique employee ID.
+  - Type: Number
+  - Required: Yes
+- `firstName` (String): The first name of the employee.
+  - Type: String
+  - Required: Yes
+- `lastName` (String): The last name of the employee.
+  - Type: String
+  - Required: Yes
+- `middleInitial` (String): The middle initial of the employee.
+  - Type: String
+- `hireDate` (Date): The date when the employee was hired.
+  - Type: Date
+  - Required: Yes
+- `terminationDate` (Date): The date when the employee was terminated (optional).
+  - Type: Date
+- `terminated` (Boolean): Indicates whether the employee is terminated.
+  - Type: Boolean
+
+#### Constructor
+
+##### `constructor(employeeId, firstName, lastName, middleInitial, hireDate)`
+
+Creates a new `Employee` instance.
+
+- `employeeId` (Number): The unique employee ID.
+- `firstName` (String): The first name of the employee.
+- `lastName` (String): The last name of the employee.
+- `middleInitial` (String): The middle initial of the employee.
+- `hireDate` (Date): The date when the employee was hired.
+
+#### Methods
+
+##### `terminateEmployee(date)`
+
+Sets the termination date and marks the employee as terminated.
+
+- `date` (Date): The date of termination.
+
+#### Example
+
+```javascript
+const Employee = require('./Employee');
+
+// Create a new employee
+const employee = new Employee(1, 'John', 'Doe', 'M', new Date('2023-09-24'));
+
+// Terminate the employee
+employee.terminateEmployee(new Date('2023-09-30'));
+
+console.log(employee);
+```
+
+##### Properties
 
 - `Number` id
 - `String` firstName
 - `String` lastName
 - `String` email
 - `String` phone
+
+
 
 ### Order
 
@@ -185,6 +253,7 @@ The `employeeSchema` represents the schema for the Employee model. It defines th
 - `hireDate` (Date): The date when the employee was hired.
   - Type: Date
   - Required: Yes
+- `terminatd`: (Boolean) True if customer is terminated .
 - `terminationDate` (Date): The date when the employee was terminated (optional).
 
 ### Data Models
