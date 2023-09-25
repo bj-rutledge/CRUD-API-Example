@@ -3,6 +3,9 @@
  * 2023-09-17
  */
 
+const getType = require('../helpers/getType');
+const types = require('../helpers/types');
+
 class Product {
    /**Default minimum markup. */
    MIN_MARKUP = 1.5;
@@ -26,12 +29,12 @@ class Product {
       productDescription
    ) {
       if (
-         typeof productNumber == 'number' &&
-         typeof cost == 'number' &&
-         typeof markup == 'number' &&
-         typeof sellAtList == 'boolean' &&
-         typeof productName == 'string' &&
-         typeof productDescription == 'string'
+         getType(productNumber) == types.Number &&
+         getType(cost) == types.Number &&
+         getType(markup) == types.Number &&
+         getType(sellAtList) == types.Boolean &&
+         getType(productName) == types.String &&
+         getType(productDescription) == types.String
       ) {
          this.number = productNumber;
          this.cost = cost;

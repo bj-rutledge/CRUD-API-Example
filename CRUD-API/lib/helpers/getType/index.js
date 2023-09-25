@@ -5,22 +5,16 @@
  */
 
 const getType = (obj) => {
-   const _typeof = typeof obj;
-   if(_typeof != 'object'){
-      return _typeof;
+
+   if(obj === undefined || obj === null){
+      return obj;
    }
-   /**The obj prototype toString call returns a string 
-    * that is in the following format:
-    * [object ObjectType] [class TypeName], etc. 
-    * This line, gets the string and pulls out the 
-    * object/class name. 
-    * Note: For objects that are defined using standard 
-    * object instantiation practices, eg. 
-    * const myObj = {prop: 'myProp'}
-    * the return value of this will: 
-    * Object, where 'O' is case capatalized. 
+   /**the constructor.name property holds the class name of all 
+    * classes/objects. Therefore, We'll use this to get the 
+    * type of the object. If it's  just a simple object, the 
+    * return value will be Object. 
     */
-   return Objeccode.prototype.toString.call(obj).split(' ')[1].slice(0, -1);
+   return obj.constructor.name;
 }
 
 module.exports = getType; 
