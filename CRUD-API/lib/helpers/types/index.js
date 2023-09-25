@@ -14,11 +14,19 @@ const types = {
    Order: 'Order',
    Employee: 'Employee', 
    Customer: 'Customer', 
-   // Native types 
+   //mongoose types 
+   Schema: 'Schema',
+   // Primitive types 
+   Boolean: 'Boolean', 
+   Number: 'Number', 
+   BigInt: 'BigInt',
+   String: 'String',
+   Symbol: 'Symbol', 
+
+   //Non primitive  
    Array: 'Array', 
-   Number: 'number', 
-   String: 'string', 
-   Bool: 'boolean', 
    Object: 'Object',
-   Schema: 'Schema'
+   Date: 'Date'
 }
+
+module.exports = types; 
