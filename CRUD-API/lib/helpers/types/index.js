@@ -19,5 +19,6 @@ const types = {
    Number: 'number', 
    String: 'string', 
    Bool: 'boolean', 
-   Object: 'Object'
+   Object: 'Object',
+   Schema: 'Schema'
 }
