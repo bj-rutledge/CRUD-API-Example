@@ -17,10 +17,17 @@ class Order {
    constructor(date, id, items, customerNumber) {
       if (
          getType(date) === types.Date &&
-         typeof id === 'number' &&
-         Object.prototype.toString.call(items) === '[object Array]' &&
-         typeof customerNumber === 'number'
+         getType(id) === types.Number &&
+         getType(items) === types.Array &&
+         getType(customerNumber) === types.Number
       ) {
+         /* todo need to clean this up and do some real error handling. 
+          *  */
+         for(let i = 0; i < items.length; i++){
+            if(getType(items[i]) != types.Product){
+               console.error('Invalid product in order');
+            }
+         }
          this.date = date;
          this.id = id;
          this.items = items;

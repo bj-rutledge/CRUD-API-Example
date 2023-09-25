@@ -40,7 +40,7 @@ test('Verify that get type and types are mapped properly', ()=> {
     */
 
    for(const key in testTypes){
-      console.debug('Testing', key)
+      console.debug('Testing', key);
       expect(getType(testTypes[key])).toBe(types[key]); 
    }
 
