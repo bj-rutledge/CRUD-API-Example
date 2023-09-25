@@ -1,3 +1,6 @@
+#Credentials 
+
+
 # Logs
 logs
 *.log
@@ -72,13 +75,14 @@ web_modules/
 # Yarn Integrity file
 .yarn-integrity
 
-# dotenv environment variable files
+# dotenv environment variable files and folder
+
 .env
 .env.development.local
 .env.test.local
 .env.production.local
 .env.local
-
+env/
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 .parcel-cache
