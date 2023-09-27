@@ -1,10 +1,9 @@
-'use strict'; 
+'use strict';
 
 /**Created by BJ Rutledge
  * 2023-09-25
  * license MIT
  */
-
 
 const mongoose = require('mongoose');
 const Order = require('../../order');
@@ -41,4 +40,4 @@ const customerSchema = new mongoose.Schema({
 
 const Customer = mongoose.model('Customer', customerSchema);
 
-module.exports = Customer; 
+module.exports = Customer;

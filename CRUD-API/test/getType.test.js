@@ -1,4 +1,4 @@
-/**Created by BJ Rutledg 
+/**Created by BJ Rutledg
  * 2023-09-24
  */
 
@@ -10,38 +10,40 @@ const types = require('../lib/helpers/types');
 const Employee = require('../lib/employee');
 const Customer = require('../lib/customer');
 
-const employeeId = 0; 
+const employeeId = 0;
 const firstName = 'foo';
-const lastName = 'bar'; 
-const middleInitial = 'b'; 
-const dateHired = new Date(); 
+const lastName = 'bar';
+const middleInitial = 'b';
+const dateHired = new Date();
 
 const testTypes = {
-   Employee: new Employee(employeeId, firstName, lastName, middleInitial, dateHired),
-   Customer: new Customer(), 
+   Employee: new Employee(
+      employeeId,
+      firstName,
+      lastName,
+      middleInitial,
+      dateHired
+   ),
+   Customer: new Customer(),
    Array: new Array(),
-   Number: 0, 
-   String: 'String', 
-   Boolean: true, 
+   Number: 0,
+   String: 'String',
+   Boolean: true,
    Object: new Object(),
    Date: new Date(),
    // Symbol: new Symbol(),
-   // BigInt: new BigInt(), 
-}
+   // BigInt: new BigInt(),
+};
 
-
-test('Verify that get type and types are mapped properly', ()=> {
-
+test('Verify that get type and types are mapped properly', () => {
    console.log('testTypes:', testTypes);
-
 
    /**Each key in the object testTypes should be
     * mapped to the key of types.
     */
 
-   for(const key in testTypes){
+   for (const key in testTypes) {
       console.debug('Testing', key);
-      expect(getType(testTypes[key])).toBe(types[key]); 
+      expect(getType(testTypes[key])).toBe(types[key]);
    }
-
 });
