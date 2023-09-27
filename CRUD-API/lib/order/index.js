@@ -21,10 +21,12 @@ class Order {
          getType(items) === types.Array &&
          getType(customerNumber) === types.Number
       ) {
-         /* todo need to clean this up and do some real error handling. 
+
+         /* todo need to clean this up and do some real error handling.
           *  */
-         for(let i = 0; i < items.length; i++){
-            if(getType(items[i]) != types.Product){
+         for (let i = 0; i < items.length; i++) {
+            if (getType(items[i]) != types.Product) {
+
                console.error('Invalid product in order');
             }
          }
@@ -52,4 +54,3 @@ class Order {
 }
 
 module.exports = Order;
-

@@ -1,10 +1,10 @@
-'use strict'; 
+'use strict';
 
-/**Created by BJ Rutledge 
+/**Created by BJ Rutledge
  * 2023-09-25
- * License MIT 
+ * License MIT
  */
-const {Schema, model} = require('mongoose');
+const { Schema, model } = require('mongoose');
 
 /*Employee schema
  *
@@ -36,13 +36,11 @@ const employeeSchema = new Schema({
    },
    terminated: {
       type: Boolean,
-      required: [true, 'Must have terminated boolean']
+      required: [true, 'Must have terminated boolean'],
    },
    terminationDate: Date,
 });
 
-
-
 const Employee = model('Employee', employeeSchema);
 
-module.exports = Employee; 
+module.exports = Employee;

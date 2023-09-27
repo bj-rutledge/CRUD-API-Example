@@ -7,6 +7,5 @@ const Employee = require('./lib/employee.js');
 const Product = require('./lib/product.js');
 const Order = require('./order.js');
 
-
-const models =  { Customer, Employee, Product, Order};
-module.exports = models; 
+const models = { Customer, Employee, Product, Order };
+module.exports = models;
