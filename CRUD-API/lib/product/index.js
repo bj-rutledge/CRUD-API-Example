@@ -28,39 +28,59 @@ class Product {
       productName,
       productDescription
    ) {
-      if (
-         getType(productNumber) == types.Number &&
-         getType(cost) == types.Number &&
-         getType(markup) == types.Number &&
-         getType(sellAtList) == types.Boolean &&
-         getType(productName) == types.String &&
-         getType(productDescription) == types.String
-      ) {
-         this.number = productNumber;
-         this.cost = cost;
-         this.markup = markup >= this.MIN_MARKUP ? markup : this.MIN_MARKUP;
-         this.listPrice = listPrice;
-         this.sellAtList = sellAtList;
-         this.productName = productName;
-         this.productDescription = productDescription;
-      } else {
-         console.error(
-            'Invalid arguments.',
-            productNumber,
-            cost,
-            markup,
-            listPrice,
-            sellAtList,
-            productName,
-            productDescription
-         );
+      switch (true) {
+         case (
+            typeof productNumber === 'number' &&
+            typeof cost === 'number' &&
+            typeof markup === 'number' &&
+            typeof sellAtList === 'boolean' &&
+            typeof productName === 'string' &&
+            typeof productDescription === 'string'
+         ):
+            this.number = productNumber;
+            this.cost = cost;
+            this.markup = markup >= this.MIN_MARKUP ? markup : this.MIN_MARKUP;
+            this.listPrice = listPrice;
+            this.sellAtList = sellAtList;
+            this.productName = productName;
+            this.productDescription = productDescription;
+
+            // Added a flag for override
+            this.overrideCheck = false;
+
+            // Check if price is greater than cost
+            if (!this.overrideCheck && this.price <= this.cost) {
+               console.error(
+                  'Price must be greater than cost. Use override to bypass.'
+               );
+            }
+            break;
+
+         default:
+            console.error(
+               'Invalid arguments.',
+               productNumber,
+               cost,
+               markup,
+               listPrice,
+               sellAtList,
+               productName,
+               productDescription
+            );
+            break;
       }
    }
-   /** Customer price of product. If sellAtList is set to true, price will be list, otherwise,
+      /** Customer price of product. If sellAtList is set to true, price will be list, otherwise,
     * it will be calculated cost * markup.
     */
+
    get price() {
       return this.sellAtList ? this.listPrice : this.cost * this.markup;
+   }
+
+   // Method to override the price check
+   overridePriceCheck() {
+      this.overrideCheck = true;
    }
 }
 
