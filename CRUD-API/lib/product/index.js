@@ -54,7 +54,7 @@ class Product {
                   'Price must be greater than cost. Use override to bypass.'
                );
             }
-            break;
+            break
 
          default:
             console.error(
@@ -78,7 +78,7 @@ class Product {
       return this.sellAtList ? this.listPrice : this.cost * this.markup;
    }
 
-   // Method to override the price check
+   // Method to override the price check.
    overridePriceCheck() {
       this.overrideCheck = true;
    }
