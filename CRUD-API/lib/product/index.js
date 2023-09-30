@@ -70,6 +70,9 @@ class Product {
             break;
       }
    }
+      /** Customer price of product. If sellAtList is set to true, price will be list, otherwise,
+    * it will be calculated cost * markup.
+    */
 
    get price() {
       return this.sellAtList ? this.listPrice : this.cost * this.markup;
