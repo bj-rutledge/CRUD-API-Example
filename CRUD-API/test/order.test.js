@@ -11,7 +11,7 @@
  * * the order and product classes.
  */
 const Order = require('../lib/DataTypes/order');
-const Product = require('../lib/product');
+const Product = require('../lib//DataTypes/product');
 
 test('Sanity check. create order and get the order total.', () => {
    const items = [
