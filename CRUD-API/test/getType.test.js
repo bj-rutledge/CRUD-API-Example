@@ -7,8 +7,8 @@
 // const Product = require('../lib/product');
 const getType = require('../lib/helpers/getType');
 const types = require('../lib/helpers/types');
-const Employee = require('../lib/employee');
-const Customer = require('../lib/customer');
+const Employee = require('../lib/DataTypes/employee');
+const Customer = require('../lib/DataTypes/customer');
 
 const employeeId = 0;
 const firstName = 'foo';
