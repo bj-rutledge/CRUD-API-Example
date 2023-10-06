@@ -3,8 +3,8 @@
  * 2023-09-17*/
 
 const Product = require('../product');
-const getType = require('../helpers/getType');
-const types = require('../helpers/types');
+const getType = require('../../helpers/getType');
+const types = require('../../helpers/types');
 
 class Order {
    /**
