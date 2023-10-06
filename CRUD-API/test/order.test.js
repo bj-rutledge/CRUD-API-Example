@@ -10,7 +10,7 @@
  * * works in this context. We will test it on its own without instantiating
  * * the order and product classes.
  */
-const Order = require('../lib/order');
+const Order = require('../lib/DataTypes/order');
 const Product = require('../lib/product');
 
 test('Sanity check. create order and get the order total.', () => {
