@@ -12,11 +12,11 @@ class Customer {
     * Customer class. 
     * @param {string} firstName First name 
     * @param {string} lastName last name 
-    * @param {string} middleInitial middle initial
-    * @param {string} email email address 
+    * @param {string} middleInitial middle initial (accepts null/undefined)
+    * @param {string} email email address (accepts null/undefined)
     * @param {string} phone phone number. 
-    * @param {boolean} taxable False if customer is tax exempt
-    * @param {[number]} orders array of order numbers. If no orders, pass undefined.
+    * @param {boolean} taxable False if customer is tax exempt 
+    * @param {[number]} orders array of order numbers. If no orders, pass null/undefined.
     */
    constructor(
       firstName,
@@ -49,6 +49,7 @@ class Customer {
       this.taxable = taxable; 
       this.orders = orders || []; 
    }
+   
 
 }
 

@@ -11,7 +11,7 @@ class Order {
     * Customer order.
     * @param {Date} date Date of order
     * @param {Number} id Order number
-    * @param {[Product]} items Array of Products
+    * @param {[Product]} items Array of Products. 
     * @param {Number} customerNumber Customer Number
     */
    constructor(date, id, items, customerNumber) {
@@ -21,8 +21,8 @@ class Order {
          getType(items) === types.Array &&
          getType(customerNumber) === types.Number
       ) {
-         /* todo need to clean this up and do some real error handling.
-          *  */
+          
+         // todo need to clean this up and do some real error handling.
          for (let i = 0; i < items.length; i++) {
             if (getType(items[i]) != types.Product) {
                console.error('Invalid product in order');
@@ -37,6 +37,7 @@ class Order {
       }
    }
 
+   //todo need to flush this out. Error checking/handling, etc. 
    /**
     * Order total sums the total price of the product array by accessing the product.price property.
     */

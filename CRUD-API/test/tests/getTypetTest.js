@@ -5,10 +5,10 @@
 //Order and product have been tested in order.test.js
 // const Order = require('../lib/order');
 // const Product = require('../lib/product');
-const getType = require('../lib/helpers/getType');
-const types = require('../lib/helpers/types');
-const Employee = require('../lib/DataTypes/employee');
-const Customer = require('../lib/DataTypes/customer');
+const getType = require('../../lib/helpers/getType');
+const types = require('../../lib/helpers/types');
+const Employee = require('../../lib/DataTypes/employee');
+const Customer = require('../../lib/DataTypes/customer');
 
 const employeeId = 0;
 const firstName = 'foo';
