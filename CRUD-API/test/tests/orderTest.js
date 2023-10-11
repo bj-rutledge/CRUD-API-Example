@@ -1,17 +1,17 @@
 'use strict';
-
+//todo 2023-09-18 Need to add a check in the classes for 0 <= values for cost and list < cost checks.
 /**Created By BJ Rutledge
  * 2023-09-18
  * Unit tests of Product and Order classes. More comprehensive testing
  * and development.
- * todo 2023-09-18 Need to add a check in the classes for 0 <= values for cost and list < cost checks.
+ *  
  * * Note that these tests also do a sumary test of getType, as the
  * * classes call on getType for argument validation. So, we know that getType
  * * works in this context. We will test it on its own without instantiating
  * * the order and product classes.
  */
-const Order = require('../lib/DataTypes/order');
-const Product = require('../lib//DataTypes/product');
+const Order = require('../../lib/DataTypes/order');
+const Product = require('../../lib/DataTypes/product');
 
 test('Sanity check. create order and get the order total.', () => {
    const items = [

@@ -1,7 +1,11 @@
 'use strict';
 /** Created by BJ Rutledge
  * 8/20/2023
+ * Refactored 
+ * 2023-10-07
  **/
+
+
 const mongoose = require('mongoose');
 const schemas = require('../schemas');
 
