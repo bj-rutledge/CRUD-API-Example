@@ -43,6 +43,18 @@ class Product {
          this.sellAtList = sellAtList;
          this.productName = productName;
          this.productDescription = productDescription;
+
+
+         // Calculate the price directly
+         const calculatedPrice = this.sellAtList ? this.listPrice : this.cost * this.markup;
+
+         // Check if price is greater than cost
+         if (calculatedPrice <= this.cost) {
+            console.error(
+               'Price must be greater than cost.'
+            );
+            return; // Stop further execution
+         }
       } else {
          console.error(
             'Invalid arguments.',
