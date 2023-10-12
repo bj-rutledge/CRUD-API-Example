@@ -1,7 +1,11 @@
 'use strict';
+/**
+ * Created by Stephen Awuah
+ * Date: 2023-10-11
+ **/
 
 const Product = require('../lib//DataTypes/product');
-
+//todo emplement error handler 
 describe('Product', () => {
     it('should create a product with correct properties and price', () => {
         const product = new Product(123, 50, 1.5, 80, false, 'Example Product', 'This is an example product.');

@@ -6,6 +6,7 @@
  */
 const getType = require('../../helpers/getType');
 const types = require('../../helpers/types');
+//todo emplement error handling 
 
 class Customer {
    /**
@@ -38,7 +39,7 @@ class Customer {
             (orders === undefined || getType(orders) === types.Array )
          )
       ) {
-         console.log('Error. Invalid arguments');
+         console.error('Error. Invalid arguments');
       }
 
       this.firstName = firstName; 
