@@ -1,6 +1,7 @@
 'use strict';
 /* Created by BJ Rutledge
  * 2023-09-17*/
+//todo emplement error handler 
 
 const Product = require('../product');
 const getType = require('../../helpers/getType');

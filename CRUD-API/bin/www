@@ -3,6 +3,7 @@
 /**
  * Module dependencies.
  */
+//todo emplement error handler 
 
 const { resolve } = require("path");
 const envConfig = { path: resolve(__dirname, "../env/.env") };

@@ -4,6 +4,8 @@
  * 2023-10-05
  */
 
+//todo emplement error handling 
+
 const { ProductModel, OrderModel } = require('../../lib/DAL/db');
 const types = require('../../lib/DataTypes');
 

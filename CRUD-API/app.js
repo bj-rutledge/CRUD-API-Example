@@ -1,5 +1,5 @@
 'use strict';
-
+//todo emplement error handler
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
