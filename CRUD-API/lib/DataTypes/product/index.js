@@ -5,6 +5,7 @@
 
 const getType = require('../../helpers/getType');
 const types = require('../../helpers/types');
+const roundTwoDecimal = require('../../helpers/roundTwoDecimal');
 
 class Product {
    /**Default minimum markup. */
@@ -72,7 +73,10 @@ class Product {
     * it will be calculated cost * markup.
     */
    get price() {
-      return this.sellAtList ? this.listPrice : this.cost * this.markup;
+      /**Round to the 100th decimal. n.n55 === n.n6 */
+      
+      const price = this.sellAtList ? this.listPrice : roundTwoDecimal(this.cost * this.markup);
+      return price;
    }
 }
 
