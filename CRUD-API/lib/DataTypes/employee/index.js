@@ -3,7 +3,7 @@
  * 2023-09-24
  * Employee Class
  */
-//todo emplement error handler 
+//todo emplement error handler
 const getType = require('../../helpers/getType');
 
 class Employee {

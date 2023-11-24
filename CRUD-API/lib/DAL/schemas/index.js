@@ -7,7 +7,5 @@ const employeeSchema = require('./lib/employee.js');
 const productSchema = require('./lib/product.js');
 const orderSchema = require('./lib/order.js');
 
-
-const schemas =  { customerSchema, employeeSchema, productSchema, orderSchema};
-module.exports = schemas; 
-
+const schemas = { customerSchema, employeeSchema, productSchema, orderSchema };
+module.exports = schemas;

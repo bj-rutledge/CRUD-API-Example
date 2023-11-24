@@ -45,15 +45,14 @@ class Product {
          this.productName = productName;
          this.productDescription = productDescription;
 
-
          // Calculate the price directly
-         const calculatedPrice = this.sellAtList ? this.listPrice : this.cost * this.markup;
+         const calculatedPrice = this.sellAtList
+            ? this.listPrice
+            : this.cost * this.markup;
 
          // Check if price is greater than cost
          if (calculatedPrice <= this.cost) {
-            console.error(
-               'Price must be greater than cost.'
-            );
+            console.error('Price must be greater than cost.');
             return; // Stop further execution
          }
       } else {
@@ -74,8 +73,10 @@ class Product {
     */
    get price() {
       /**Round to the 100th decimal. n.n55 === n.n6 */
-      
-      const price = this.sellAtList ? this.listPrice : roundTwoDecimal(this.cost * this.markup);
+
+      const price = this.sellAtList
+         ? this.listPrice
+         : roundTwoDecimal(this.cost * this.markup);
       return price;
    }
 }

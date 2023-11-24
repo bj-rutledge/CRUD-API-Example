@@ -116,13 +116,13 @@ Sets the termination date and marks the employee as terminated.
 #### Example
 
 ```javascript
-const Employee = require('./Employee');
+const Employee = require("./Employee");
 
 // Create a new employee
-const employee = new Employee(1, 'John', 'Doe', 'M', new Date('2023-09-24'));
+const employee = new Employee(1, "John", "Doe", "M", new Date("2023-09-24"));
 
 // Terminate the employee
-employee.terminateEmployee(new Date('2023-09-30'));
+employee.terminateEmployee(new Date("2023-09-30"));
 
 console.log(employee);
 ```
@@ -134,8 +134,6 @@ console.log(employee);
 - `String` lastName
 - `String` email
 - `String` phone
-
-
 
 ### Order
 
