@@ -5,7 +5,6 @@
  * license MIT
  */
 
-
 /*Customer schema. */
 const customerSchema = {
    number: {
@@ -37,7 +36,6 @@ const customerSchema = {
    email: {
       type: String,
       min: [5, 'email must be at least 5 characters'],
-      
    },
    taxable: {
       type: Boolean,

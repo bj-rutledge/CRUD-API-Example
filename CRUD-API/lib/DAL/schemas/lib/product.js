@@ -5,7 +5,6 @@
  * License MIT
  */
 
-
 const productSchema = {
    productNumber: {
       type: Number,
@@ -34,6 +33,5 @@ const productSchema = {
    },
    price: Number,
 };
-
 
 module.exports = productSchema;

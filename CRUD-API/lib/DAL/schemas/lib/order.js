@@ -15,7 +15,7 @@ const orderSchema = {
       required: [true, 'Must have a date of order'],
    },
    items: {
-      type: [Number],//Product number array
+      type: [Number], //Product number array
       required: [true, 'Must include an array of products'],
       validate: [
          (arry) => arry.length > 0,

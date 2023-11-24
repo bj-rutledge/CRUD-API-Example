@@ -4,7 +4,7 @@
  * 2023-09-18
  * Unit tests of Product and Order classes. More comprehensive testing
  * and development.
- *  
+ *
  * * Note that these tests also do a sumary test of getType, as the
  * * classes call on getType for argument validation. So, we know that getType
  * * works in this context. We will test it on its own without instantiating
