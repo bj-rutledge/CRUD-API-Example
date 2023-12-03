@@ -9,13 +9,12 @@ const { resolve } = require("path");
 const envConfig = { path: resolve(__dirname, "../env/.env") };
 const dotenv = require("dotenv").config(envConfig);
 
-console.log(process.env.DB_URI);
+console.debug('DB URI', process.env.DB_URI);
 
-const db = require("../lib/DAL/db");
 
 if (dotenv.error) {
    throw dotenv.error;
-}
+} 
 
 const app = require("../app");
 const debug = require("debug")("crud-api:server");

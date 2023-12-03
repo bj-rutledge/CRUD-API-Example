@@ -7,11 +7,11 @@
 
 /*Customer schema. */
 const customerSchema = {
-   number: {
+   customerNumber: {
       type: Number,
       required: [true, 'Must have a customer number.'],
    },
-   first: {
+   firstName: {
       type: String,
       min: [2, 'Name must be at least 2 characters'],
       max: 20,
@@ -21,11 +21,11 @@ const customerSchema = {
       type: String,
       max: [1, 'Middle initial is only one character.'],
    },
-   last: {
+   lastName: {
       type: String,
       min: [2, 'Name must be at least 2 characters'],
       max: 20,
-      required: [true, 'First name is required'],
+      required: [true, 'Last name is required'],
    },
    phone: {
       type: String,

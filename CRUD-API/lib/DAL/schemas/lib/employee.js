@@ -4,7 +4,6 @@
  * 2023-09-25
  * License MIT
  */
-const { Schema, model } = require('mongoose');
 
 /*Employee schema
  *
