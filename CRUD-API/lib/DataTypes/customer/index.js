@@ -20,7 +20,7 @@ class Customer {
     * @param {[number]} orders array of order numbers. If no orders, pass null/undefined.
     */
    constructor(
-      customerNumber, 
+      customerNumber,
       firstName,
       lastName,
       middleInitial,

@@ -4,12 +4,12 @@
  * Date:2023-11-26
  **/
 
-const {CustomerModel} = require('../../db'); 
+const { CustomerModel } = require('../../db');
 
 const readCustomer = (query) => {
    console.debug('Attempting to retrieve custoemr record.');
    const customer = CustomerModel.findOne(query);
-   return customer; 
-}
+   return customer;
+};
 
-module.exports = readCustomer; 
+module.exports = readCustomer;
