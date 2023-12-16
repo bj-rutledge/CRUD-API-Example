@@ -13,4 +13,5 @@ if (dotenv.error) {
 // require('./tests/getTypetTest');
 // require('./tests/mongodbTest');
 // require('./tests/orderTest');
-require('./tests/insertCustomer');
+// require('./tests/insertCustomer');
+require('./tests/routesTest.js');

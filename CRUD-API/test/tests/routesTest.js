@@ -1,21 +1,16 @@
+//todo implement error handling
 'use strict';
 /**
  * Created by BJ Rutledge
  * Date:11/26/23
  * Route testing.
  **/
-//todo implement error handling
 const axios = require('axios');
-const querystring = require('querystring');
-const apiQuery = require('./helpers/apiQuery');
+const exp = require('constants');
 
-jest.mock(axios);
-
-describe('Query data', () => {
-   it('Should retrieve records from the database via API call', async () => {
-      const query = querystring.stringify({
-         email: 'bob@bob.com',
-      });
+describe('get-customer GOOD QUERY.', () => {
+   it('Should retrieve customer record.', async () => {
+      const goodQueryUri = `http://localhost:3001/get-customer?email=bob@bob.com`;
 
       const data = {
          data: {
@@ -29,25 +24,22 @@ describe('Query data', () => {
             orders: [1233131313],
          },
       };
-      axios.get.mockImplementation(() => Promise.resolve(data));
 
-      await expect(apiQuery(data)).resolves().toEqual(data);
+      const res200GoodQuery = await axios.get(goodQueryUri);
 
-      await expect(apiQuery(query)).toHaveBeenCalledWith(
-         `http://localhost:3000/api/v1/search?${query}`
-      );
+      expect(res200GoodQuery).toBeTruthy();
+      expect(res200GoodQuery._id).toBe(data._id);
+      expect(res200GoodQuery.status).toBe(200);
+   });
+});
 
-      const invalidQuery = querystring.stringify({
-         email: 'foo@bar.com',
-      });
+describe('get-customer failure DATA NOT FOUND.', () => {
+   it('Should receive status code 204 for not receiving data.', async () => {
+      const badQueryUri =
+         'http://localhost:3001/get-customer?email=bad@email.com';
+      const res204BadQuery = await axios.get(badQueryUri);
 
-      it('Fails to fetch data', async () => {
-         const errorMessage = 'No data found';
-         axios.get.mockImplementationOnce(() => {
-            Promise.reject(new Error(errorMessage));
-         });
-
-         await expect(apiQuery(invalidQuery)).rejects.toThrow(errorMessage);
-      });
+      expect(res204BadQuery).toBeTruthy();
+      expect(res204BadQuery.status).toBe(204);
    });
 });
