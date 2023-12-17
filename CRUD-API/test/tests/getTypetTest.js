@@ -24,7 +24,16 @@ const testTypes = {
       middleInitial,
       dateHired
    ),
-   Customer: new Customer(),
+   Customer: new Customer(
+      1,
+      'Bob',
+      'jones',
+      'd',
+      'bob@bob',
+      '111-111-1111',
+      false,
+      []
+   ),
    Array: new Array(),
    Number: 0,
    String: 'String',
@@ -34,16 +43,17 @@ const testTypes = {
    // Symbol: new Symbol(),
    // BigInt: new BigInt(),
 };
+describe('Get Type', () => {
+   it('Verify that get type and types are mapped properly', () => {
+      console.log('testTypes:', testTypes);
 
-test('Verify that get type and types are mapped properly', () => {
-   console.log('testTypes:', testTypes);
+      /**Each key in the object testTypes should be
+       * mapped to the key of types.
+       */
 
-   /**Each key in the object testTypes should be
-    * mapped to the key of types.
-    */
-
-   for (const key in testTypes) {
-      console.debug('Testing', key);
-      expect(getType(testTypes[key])).toBe(types[key]);
-   }
+      for (const key in testTypes) {
+         // console.debug('Testing', key);
+         expect(getType(testTypes[key])).toBe(types[key]);
+      }
+   });
 });

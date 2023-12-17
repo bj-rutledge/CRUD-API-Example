@@ -4,7 +4,7 @@
  * Date: 2023-10-11
  **/
 
-const Product = require('../lib//DataTypes/product');
+const Product = require('../../lib/DataTypes/product');
 //todo emplement error handler
 describe('Product', () => {
    it('should create a product with correct properties and price', () => {
