@@ -44,5 +44,6 @@ describe('Insert Customer', () => {
          };
       });
       await CustomerModel.insertMany(customers);
+      await CustomerModel.db.close();
    });
 });
