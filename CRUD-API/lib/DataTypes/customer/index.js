@@ -10,6 +10,7 @@ const types = require('../../helpers/types');
 class Customer {
    /**
     * Customer class.
+    * @paran {Number} customerNumber
     * @param {string} firstName First name
     * @param {string} lastName last name
     * @param {string} middleInitial middle initial (accepts null/undefined)
@@ -19,6 +20,7 @@ class Customer {
     * @param {[number]} orders array of order numbers. If no orders, pass null/undefined.
     */
    constructor(
+      customerNumber,
       firstName,
       lastName,
       middleInitial,
@@ -29,6 +31,7 @@ class Customer {
    ) {
       if (
          !(
+            getType(customerNumber) === types.Number &&
             getType(firstName) === types.String &&
             getType(lastName) === types.String &&
             (middleInitial === undefined ||
@@ -41,7 +44,7 @@ class Customer {
       ) {
          console.error('Error. Invalid arguments');
       }
-
+      this.customerNumber = customerNumber;
       this.firstName = firstName;
       this.middleInitial = middleInitial || '';
       this.lastName = lastName;
