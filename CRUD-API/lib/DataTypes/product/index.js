@@ -75,10 +75,9 @@ class Product {
       /**Round to the 100th decimal. n.n55 === n.n6 */
 
       const price = this.sellAtList
-         ? this.listPrice
-         : roundTwoDecimal(this.cost * this.markup);
-      return price;
-   }
+        ? this.listPrice
+        : Math.max(roundTwoDecimal(this.cost * this.markup), roundTwoDecimal(this.cost * this.markdown));
+    return price;
 }
 
 module.exports = Product;
