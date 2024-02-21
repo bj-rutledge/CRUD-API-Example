@@ -9,10 +9,10 @@ const dotenv = require('dotenv').config({ path: dotEnvPath });
 if (dotenv.error) {
    throw dotenv.error;
 }
-// require('./tests/productTest.js');
-// require('./tests/getTypetTest');
-// require('./tests/mongodbTest');
-// require('./tests/orderTest');
-// require('./tests/routesTest.js');
+require('./tests/productTest.js');
+require('./tests/getTypetTest');
+require('./tests/mongodbTest');
+require('./tests/orderTest');
+require('./tests/routesTest.js');
 
 require('./tests/insertCustomer');
