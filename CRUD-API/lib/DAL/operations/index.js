@@ -4,5 +4,5 @@
  * Date:11/26/23
  **/
 
-const readCustomer = require('./readCustomer');
+const readCustomer = require('./customer/readCustomer');
 module.exports = { readCustomer };
