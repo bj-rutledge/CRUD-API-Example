@@ -19,7 +19,7 @@ productRouter.put('/update-product', (req, res, next) => {
 
 productRouter.post('/create-product', (req, res, next) =>{
    const query = req.query; 
-
+   
    const product = {
       productNumber: Number(query.number), 
       cost: Number(query.cost), 
