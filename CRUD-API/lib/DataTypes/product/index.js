@@ -29,15 +29,17 @@ class Product {
       productName,
       productDescription
    ) {
+      
       if (
          getType(productNumber) == types.Number &&
          getType(cost) == types.Number &&
          getType(markup) == types.Number &&
+         getType(listPrice) == types.Number &&
          getType(sellAtList) == types.Boolean &&
          getType(productName) == types.String &&
-         getType(productDescription) == types.String
+         getType(productDescription) == types.String 
       ) {
-         this.number = productNumber;
+         this.productNumber = productNumber;
          this.cost = cost;
          this.markup = markup >= this.MIN_MARKUP ? markup : this.MIN_MARKUP;
          this.listPrice = listPrice;
