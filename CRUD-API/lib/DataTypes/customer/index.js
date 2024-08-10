@@ -27,7 +27,7 @@ class Customer {
       email,
       phone,
       taxable,
-      orders
+      orders,
    ) {
       if (
          !(

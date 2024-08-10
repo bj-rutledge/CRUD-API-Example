@@ -18,7 +18,7 @@ describe('Insert Customer', () => {
             'bob@bob.com',
             '555-555-5555',
             true,
-            [222, 45, 232]
+            [222, 45, 232],
          ),
          new Customer(
             2,
@@ -28,7 +28,7 @@ describe('Insert Customer', () => {
             'tom@tom.com',
             '555-666-7777',
             false,
-            []
+            [],
          ),
       ];
       customers.map((cus) => {

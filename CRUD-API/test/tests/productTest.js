@@ -15,7 +15,7 @@ describe('Product', () => {
          80,
          false,
          'Example Product',
-         'This is an example product.'
+         'This is an example product.',
       );
 
       expect(product.number).toBe(123);
@@ -38,7 +38,7 @@ describe('Product', () => {
          80,
          false,
          'Example Product',
-         'This is an example product.'
+         'This is an example product.',
       );
 
       expect(product.markup).toBe(1.5);
@@ -57,7 +57,7 @@ describe('Product', () => {
          'invalid',
          'invalid',
          'invalid',
-         'invalid'
+         'invalid',
       );
 
       // Ensure an error message is logged
@@ -69,7 +69,7 @@ describe('Product', () => {
          'invalid',
          'invalid',
          'invalid',
-         'invalid'
+         'invalid',
       );
 
       // Restore console.error

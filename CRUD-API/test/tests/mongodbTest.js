@@ -41,8 +41,8 @@ describe('MongoDb', () => {
                listPrice,
                sellAtList,
                _name,
-               _description
-            )
+               _description,
+            ),
          );
 
          insertProducts.push({
@@ -63,7 +63,7 @@ describe('MongoDb', () => {
          new Date(Date.now()),
          orderNum,
          products,
-         customerNum
+         customerNum,
       );
       const itemNumbers = order.items.map((item) => item.number);
 

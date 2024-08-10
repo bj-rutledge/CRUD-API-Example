@@ -22,7 +22,7 @@ const testTypes = {
       firstName,
       lastName,
       middleInitial,
-      dateHired
+      dateHired,
    ),
    Customer: new Customer(
       1,
@@ -32,7 +32,7 @@ const testTypes = {
       'bob@bob',
       '111-111-1111',
       false,
-      []
+      [],
    ),
    Array: new Array(),
    Number: 0,
