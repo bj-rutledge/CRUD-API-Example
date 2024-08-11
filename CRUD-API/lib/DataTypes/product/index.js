@@ -27,9 +27,8 @@ class Product {
       listPrice,
       sellAtList,
       productName,
-      productDescription
+      productDescription,
    ) {
-      
       if (
          getType(productNumber) == types.Number &&
          getType(cost) == types.Number &&
@@ -37,7 +36,7 @@ class Product {
          getType(listPrice) == types.Number &&
          getType(sellAtList) == types.Boolean &&
          getType(productName) == types.String &&
-         getType(productDescription) == types.String 
+         getType(productDescription) == types.String
       ) {
          this.productNumber = productNumber;
          this.cost = cost;
@@ -66,7 +65,7 @@ class Product {
             listPrice,
             sellAtList,
             productName,
-            productDescription
+            productDescription,
          );
       }
    }

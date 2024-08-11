@@ -16,19 +16,19 @@ mongoose.connect(uri, {
 });
 const CustomerModel = mongoose.model(
    'Customer',
-   new mongoose.Schema(schemas.customerSchema)
+   new mongoose.Schema(schemas.customerSchema),
 );
 const EmployeeModel = mongoose.model(
    'Employee',
-   new mongoose.Schema(schemas.employeeSchema)
+   new mongoose.Schema(schemas.employeeSchema),
 );
 const OrderModel = mongoose.model(
    'Order',
-   new mongoose.Schema(schemas.orderSchema)
+   new mongoose.Schema(schemas.orderSchema),
 );
 const ProductModel = mongoose.model(
    'Product',
-   new mongoose.Schema(schemas.productSchema)
+   new mongoose.Schema(schemas.productSchema),
 );
 
 // const Connection = mongoose.connection;

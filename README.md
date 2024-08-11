@@ -187,7 +187,7 @@ const product = new Product(
   list,
   sellAtList,
   productName,
-  productDescription
+  productDescription,
 );
 /** If sellAtList === true, the price is set to list;
  * otherwise, it will be markup * cost.

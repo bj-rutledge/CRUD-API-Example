@@ -2,8 +2,8 @@
 /**
  * Created by BJ Rutledge
  * Date:2023-10-06
- * get-customer 2023-11-30 moved to customer router 2/21/24 
- * This will be the router for handling non crud related things. 
+ * get-customer 2023-11-30 moved to customer router 2/21/24
+ * This will be the router for handling non crud related things.
  **/
 //todo implement logging
 //todo implement error handling

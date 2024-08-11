@@ -46,7 +46,7 @@ describe('Sanity Check Order/Total', () => {
          listPrice,
          sellAtList,
          productName,
-         productDescription
+         productDescription,
       );
 
       /**Because this product markup is below the min markup, it should default to 1.5
@@ -67,7 +67,7 @@ describe('Sanity Check Order/Total', () => {
          listPrice,
          sellAtList,
          productName,
-         productDescription
+         productDescription,
       );
 
       /**Sell at list true. Should sell for 29.00 */
@@ -86,7 +86,7 @@ describe('Sanity Check Order/Total', () => {
          listPrice,
          sellAtList,
          productName,
-         productDescription
+         productDescription,
       );
 
       const date = new Date(Date.now());

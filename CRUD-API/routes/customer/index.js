@@ -3,7 +3,7 @@
  * Date:2024-02-21
  **/
 
-const customerRouter = require('express').Router(); 
+const customerRouter = require('express').Router();
 const { readCustomer } = require('../../lib/DAL/operations');
 
 customerRouter.get('/get-customer', (req, res, next) => {
@@ -16,7 +16,7 @@ customerRouter.get('/get-customer', (req, res, next) => {
       query.customerNumber == undefined
    ) {
       res.status(400).send(
-         'Query Error. Invalid query. Must query with email, phone, or customer number.'
+         'Query Error. Invalid query. Must query with email, phone, or customer number.',
       );
    } else {
       readCustomer(query)
@@ -35,22 +35,16 @@ customerRouter.get('/get-customer', (req, res, next) => {
          .catch((err) => {
             console.debug('Error reading customer', err);
             res.status(500).send(
-               'Server Error. Route get customer. Query call.'
+               'Server Error. Route get customer. Query call.',
             );
          });
    }
 });
 
-customerRouter.put('/update-customer', (req, res, next) => {
+customerRouter.put('/update-customer', (req, res, next) => {});
 
-});
+customerRouter.post('/create-customer', (req, res, next) => {});
 
-customerRouter.post('/create-customer', (req, res, next) =>{
+customerRouter.delete('delete-customer', (req, res, next) => {});
 
-});
-
-customerRouter.delete('delete-customer', (req, res, next) =>{
-
-});
-
-module.exports = customerRouter; 
+module.exports = customerRouter;
