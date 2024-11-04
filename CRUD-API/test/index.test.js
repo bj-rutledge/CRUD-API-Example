@@ -10,7 +10,6 @@ if (dotenv.error) {
    throw dotenv.error;
 }
 
-
 // require('./tests/productTest.js');
 // require('./tests/getTypetTest');
 // require('./tests/mongodbTest');

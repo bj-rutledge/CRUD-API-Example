@@ -8,30 +8,30 @@
 const productSchema = {
    productNumber: {
       type: Number,
-      required: [true, 'Must have a product number.'],
+      required: [true, 'Must have a product number.']
    },
    cost: {
       type: Number,
-      required: [true, 'Must have a cost'],
+      required: [true, 'Must have a cost']
    },
    markup: Number,
    listPrice: {
       type: Number,
-      required: [true, 'Must have list price'],
+      required: [true, 'Must have list price']
    },
    sellAtList: {
       type: Boolean,
-      required: [true, 'Must have sell at list'],
+      required: [true, 'Must have sell at list']
    },
    productName: {
       type: String,
-      required: [true, 'Must have product name'],
+      required: [true, 'Must have product name']
    },
    productDescription: {
       type: String,
-      required: [true, 'Must have product description'],
+      required: [true, 'Must have product description']
    },
-   price: Number,
+   price: Number
 };
 
 module.exports = productSchema;

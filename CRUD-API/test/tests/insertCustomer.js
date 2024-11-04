@@ -29,7 +29,7 @@ describe('Insert Customer', () => {
             '555-666-7777',
             false,
             []
-         ),
+         )
       ];
       customers.map((cus) => {
          return {
@@ -40,7 +40,7 @@ describe('Insert Customer', () => {
             email: cus.email,
             phone: cus.phone,
             taxable: cus.taxable,
-            orders: cus.orders,
+            orders: cus.orders
          };
       });
       await CustomerModel.insertMany(customers);

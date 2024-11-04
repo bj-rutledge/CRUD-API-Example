@@ -52,7 +52,7 @@ describe('MongoDb', () => {
             sellAtList: products[i].sellAtList,
             productName: products[i].productName,
             productDescription: products[i].productDescription,
-            price: products[i].price,
+            price: products[i].price
          });
       }
 
@@ -73,8 +73,8 @@ describe('MongoDb', () => {
             id: order.id,
             date: order.date,
             //We only store the product number in the db.
-            items: itemNumbers,
-         },
+            items: itemNumbers
+         }
       ]);
 
       const orderRes = await OrderModel.find({ id: order.id }).exec();
@@ -90,7 +90,7 @@ describe('MongoDb', () => {
 
       for (let i = 0; i < products.length; i++) {
          const productRes = await ProductModel.find({
-            productNumber: products[i].number,
+            productNumber: products[i].number
          }).exec();
          expect(productRes[0].productName).toBe(products[i].productName);
       }

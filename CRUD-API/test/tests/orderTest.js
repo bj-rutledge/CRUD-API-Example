@@ -23,7 +23,7 @@ describe('Sanity Check Order/Total', () => {
           */
          new Product(1, 5, 2, 1.8, false, 'product1', 'product1'),
          new Product(2, 5, 2, 1.8, false, 'product2', 'product2'),
-         new Product(3, 5, 2, 1.8, false, 'product3', 'product3'),
+         new Product(3, 5, 2, 1.8, false, 'product3', 'product3')
       ];
       const order = new Order(new Date(), 12, items, 34);
       expect(order.orderTotal).toBe(30);

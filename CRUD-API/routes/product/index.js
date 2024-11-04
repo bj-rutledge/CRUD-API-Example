@@ -69,7 +69,7 @@ productRouter.post('/create-product', (req, res, next) => {
       listPrice: Number(query.listPrice),
       sellAtList: query.sellAtList == 'false' ? false : true,
       productName: query.productName,
-      productDescription: query.productDescription,
+      productDescription: query.productDescription
    };
 
    createProduct(product).then((queryResult) => {
