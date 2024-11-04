@@ -12,7 +12,7 @@ const uri = process.env.DB_URI;
 
 mongoose.connect(uri, {
    useNewUrlParser: true,
-   useUnifiedTopology: true,
+   useUnifiedTopology: true
 });
 const CustomerModel = mongoose.model(
    'Customer',

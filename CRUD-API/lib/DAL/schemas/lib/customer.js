@@ -9,39 +9,39 @@
 const customerSchema = {
    customerNumber: {
       type: Number,
-      required: [true, 'Must have a customer number.'],
+      required: [true, 'Must have a customer number.']
    },
    firstName: {
       type: String,
       min: [2, 'Name must be at least 2 characters'],
       max: 20,
-      required: [true, 'First name is required'],
+      required: [true, 'First name is required']
    },
    middleInitial: {
       type: String,
-      max: [1, 'Middle initial is only one character.'],
+      max: [1, 'Middle initial is only one character.']
    },
    lastName: {
       type: String,
       min: [2, 'Name must be at least 2 characters'],
       max: 20,
-      required: [true, 'Last name is required'],
+      required: [true, 'Last name is required']
    },
    phone: {
       type: String,
       min: [10, 'phone must be at least 10 characters'],
       max: 15,
-      required: [true, 'Phone name is required'],
+      required: [true, 'Phone name is required']
    },
    email: {
       type: String,
-      min: [5, 'email must be at least 5 characters'],
+      min: [5, 'email must be at least 5 characters']
    },
    taxable: {
       type: Boolean,
-      required: [true, 'taxable is a required field.'],
+      required: [true, 'taxable is a required field.']
    },
-   orders: [Number],
+   orders: [Number]
 };
 
 module.exports = customerSchema;

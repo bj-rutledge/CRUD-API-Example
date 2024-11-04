@@ -39,7 +39,7 @@ const testTypes = {
    String: 'String',
    Boolean: true,
    Object: new Object(),
-   Date: new Date(),
+   Date: new Date()
    // Symbol: new Symbol(),
    // BigInt: new BigInt(),
 };

@@ -21,8 +21,8 @@ describe('get-customer GOOD QUERY.', () => {
             email: 'bob@bob.com',
             phone: '555-555-5555',
             taxable: true,
-            orders: [1233131313],
-         },
+            orders: [1233131313]
+         }
       };
 
       const res200GoodQuery = await axios.get(goodQueryUri);

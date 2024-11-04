@@ -27,7 +27,7 @@ const types = {
    //Non primitive
    Array: 'Array',
    Object: 'Object',
-   Date: 'Date',
+   Date: 'Date'
 };
 
 module.exports = types;
