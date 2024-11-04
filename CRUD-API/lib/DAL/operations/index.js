@@ -5,4 +5,5 @@
  **/
 
 const readCustomer = require('./customer/readCustomer');
-module.exports = { readCustomer };
+const updateCustomer = require('./customer/updateCustomer');
+module.exports = { readCustomer, updateCustomer };
